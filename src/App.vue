@@ -1,13 +1,22 @@
 <template>
   <div id="app">
+    <Header />
     <img src="./assets/logo.png">
-    <router-view/>
+    <hellow-world />
+    <send-data name='seul'></send-data>
   </div>
 </template>
 
 <script>
+import Helloworld from './components/HelloWorld'
+import SendData from './components/SendData'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    'hellow-world': Helloworld,
+    'send-data': SendData,
+  }
 }
 </script>
 
