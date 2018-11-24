@@ -1,13 +1,5 @@
 <template>
-  <codemirror v-model="code" :options="cmOptions"></codemirror>
-    <!-- <form id="ex1" action="/email_post" method="post" @submit.prevent="sendPost">
-        <div>{{ name }}</div>
-        <input   v-model="title"
-                 type="text" 
-                 name="title">
-                 <br>
-        <button @click="sendEmail">Send</button>
-    </form> -->
+  <codemirror v-model="code" :options="cmOptions" @keyup="sendPost"></codemirror>
 </template>
 
 <script>
@@ -26,7 +18,7 @@ export default {
     return {
       name: '',
       title: '',
-      code: 'const a = 10 sadfafd faf ',
+      code: 'const a = 10',
       cmOptions: {
         // codemirror options
         tabSize: 4,
@@ -40,7 +32,7 @@ export default {
   methods: {
     sendPost: function () {
       this.axios.post('//jsonplaceholder.typicode.com/posts', {
-        userId: 1,
+        code: this.code,
       })
       .then(function(res) {
         console.log(res.data)

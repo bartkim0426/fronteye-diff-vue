@@ -6,12 +6,13 @@ import router from './router'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import VueCodemirror from 'vue-codemirror'
-
 import 'codemirror/lib/codemirror.css'
 
  
 Vue.use(VueAxios, axios)
-Vue.use(VueCodemirror)
+Vue.use(VueCodemirror, {
+  events: ['change', 'changes', 'focus', 'scroll', 'keyup']
+})
 
 Vue.config.productionTip = false
 
