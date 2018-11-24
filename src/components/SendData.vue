@@ -1,5 +1,5 @@
 <template>
-  <codemirror v-model="code" :options="cmOptions" @keyup="sendPost"></codemirror>
+  <codemirror v-model="code" :options="cmOptions"></codemirror>
 </template>
 
 <script>
@@ -18,7 +18,7 @@ export default {
     return {
       name: '',
       title: '',
-      code: 'const a = 10',
+      code: 'const a = 10dfsdf',
       cmOptions: {
         // codemirror options
         tabSize: 4,
@@ -49,6 +49,10 @@ export default {
   mounted() {
     console.log('this is current codemirror object', this.codemirror)
     // you can use this.codemirror to do something...
+  },
+  beforeUpdate() {
+    console.log('updated');
+    this.sendPost()
   }
 }
 </script>
