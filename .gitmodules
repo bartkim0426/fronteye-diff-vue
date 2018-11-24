@@ -1,0 +1,4 @@
+[submodule "fronteye-diff-vue"]
+	path = fronteye-diff-vue
+	url = https://github.com/bartkim0426/fronteye-diff-vue.git
+	branch = master
