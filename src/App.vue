@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <Header />
-    <img src="./assets/logo.png">
-    <hellow-world />
     <send-data name='seul'></send-data>
   </div>
 </template>
