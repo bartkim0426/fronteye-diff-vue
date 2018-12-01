@@ -1,19 +1,12 @@
 <template>
   <div id="app">
-    <send-data name='seul'></send-data>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Helloworld from './components/HelloWorld'
-import SendData from './components/SendData'
-
 export default {
   name: 'App',
-  components: {
-    'hellow-world': Helloworld,
-    'send-data': SendData,
-  }
 }
 </script>
 
