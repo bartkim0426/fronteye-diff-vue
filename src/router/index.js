@@ -15,19 +15,14 @@ export default new Router({
       component: Main
     },
     {
-      path: '/list',
+      path: '/rooms/',
       name: 'ListRoom',
       component: ListRoom
-    }
-    // {
-    //   path: '/(?<code>)',
-    //   name: 'SendData',
-    //   component: SendData
-    // },
-    // {
-    //   path: '/create',
-    //   name: 'CreateRoom',
-    //   component: CreateRoom
-    // },
+    },
+    {
+      path: '/rooms/:id',
+      name: 'SendData',
+      component: SendData
+    },
   ]
 })
